@@ -25,8 +25,9 @@ namespace TwentyFour.Models
         /// <returns>The two cards at the top of the player's deck.</returns>
         public List<Card> ShowTopTwoCards()
         {
-            List<Card> topTwoCards = Deck.GetRange(0, 2);
-            Deck.RemoveRange(0, 2);
+            int count = Deck.Count() - 2;
+            List<Card> topTwoCards = Deck.GetRange(count, 2);
+            Deck.RemoveRange(count, 2);
 
             float x = .42f;
             float y = .55f;
@@ -48,16 +49,15 @@ namespace TwentyFour.Models
         /// <summary>
         /// Adds the cards in the middle of the board to the bottom of a player's deck.
         /// </summary>
-        /// <param name="middleCards">All 4 cards in the middle of the board.</param>
+        /// <param name="middleCards">Cards in the middle of the board.</param>
         public void TakeMiddleCards(List<Card> middleCards)
         {
-
             foreach (Card card in Deck)
                 card.transform.localPosition += (new Vector3(1 / 750f, 1 / 750f, -1 / 750f)) * middleCards.Count();
 
-            Deck.AddRange(middleCards);
+            Deck.InsertRange(0, middleCards);
 
-            Vector3 newPosition = IsPlayerOne ? new Vector3(-2.8f, 0) : new Vector3(2.8f, 0);
+            Vector3 newPosition = IsPlayerOne ? new Vector3(-1.8f, 0) : new Vector3(1.8f, 0);
             for (int i = 0; i < middleCards.Count(); i++)
             {
                 middleCards[i].ShowBack();

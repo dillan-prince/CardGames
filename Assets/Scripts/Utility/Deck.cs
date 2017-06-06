@@ -48,7 +48,7 @@ namespace TwentyFour.Utility
             playerOne.Deck = new List<Card>();
             playerTwo.Deck = new List<Card>();
 
-            float finalX = 2.8f;
+            float finalX = 1.8f;
             float displace = 750f;
 
             for (int i = 0; i < _deck.Count() / 2; i++)

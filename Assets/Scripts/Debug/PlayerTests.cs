@@ -27,22 +27,22 @@ public class PlayerTests : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 100, 28), "Shuffle"))
+        if (GUI.Button(new Rect(10, 515, 100, 50), "Shuffle"))
         {
             _deck.Shuffle();
         }
 
-        if (GUI.Button(new Rect(10, 40, 100, 28), "Deal"))
+        if (GUI.Button(new Rect(110, 515, 100, 50), "Deal"))
         {
             _deck.Deal(_playerOne, _playerTwo);
         }
 
-        if (GUI.Button(new Rect(10, 70, 100, 28), "Reset"))
+        if (GUI.Button(new Rect(210, 515, 100, 50), "Reset"))
         {
             _deck.Reset();
         }
 
-        if (GUI.Button(new Rect(10, 100, 100, 28), "Show Top Two"))
+        if (GUI.Button(new Rect(310, 515, 100, 50), "Show Top Two"))
         {
             _middleCards = new List<Card>();
 
@@ -53,23 +53,23 @@ public class PlayerTests : MonoBehaviour
             _middleCards.AddRange(playerTwoCards);
         }
 
-        if (GUI.Button(new Rect(10, 130, 100, 28), "Flip"))
+        if (GUI.Button(new Rect(410, 515, 100, 50), "Flip"))
         {
             foreach (Card card in _middleCards)
                 card.ShowFront();
         }
 
-        if (GUI.Button(new Rect(10, 160, 100, 28), "Player One Win"))
+        if (GUI.Button(new Rect(510, 515, 100, 50), "Player One Win"))
         {
             _playerTwo.TakeMiddleCards(_middleCards);
         }
 
-        if (GUI.Button(new Rect(10, 190, 100, 28), "Player Two Win"))
+        if (GUI.Button(new Rect(610, 515, 100, 50), "Player Two Win"))
         {
             _playerOne.TakeMiddleCards(_middleCards);
         }
 
-        if (GUI.Button(new Rect(10, 220, 100, 28), "Round Draw"))
+        if (GUI.Button(new Rect(710, 515, 100, 50), "Round Draw"))
         {
             _playerOne.TakeMiddleCards(new List<Card> { _middleCards[1], _middleCards[3] });
             _playerTwo.TakeMiddleCards(new List<Card> { _middleCards[0], _middleCards[2] });
