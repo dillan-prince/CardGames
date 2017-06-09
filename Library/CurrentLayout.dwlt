@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1829
     height: 896
-  m_MinSize: {x: 713, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 78
+  controlID: 21
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,8 +153,8 @@ MonoBehaviour:
     y: 0
     width: 843
     height: 613
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 14}
@@ -207,8 +207,8 @@ MonoBehaviour:
     y: 0
     width: 451
     height: 896
-  m_MinSize: {x: 234, y: 471}
-  m_MaxSize: {x: 10004, y: 14021}
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
   controlID: 79
 --- !u!114 &10
@@ -229,8 +229,8 @@ MonoBehaviour:
     y: 0
     width: 451
     height: 381
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -519,7 +519,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00f2feff30f5feff700dffff800dffff820dffff8248ffffec53ffff5c54ffffd455ffff36b4ffff3ebdffffdcc7ffff60c9ffff84d5ffff0cd6ffff1ed7ffff9ce4ffff76e9fffff0eaffffbcecffff42edffff54eefffff6efffffbcf1ffff42f2ffff74faffffdafbffff000000001e2900003a2900004a2a0000782a00005c2e00008a2e0000942e0000962f00009a2f0000463700002642000030420000
+    m_ExpandedIDs: dafbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -578,20 +578,18 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/Scripts/Controllers
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Scenes
+  m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Dillan\Desktop\Unity\TwentyFour
+  m_LastProjectPath: C:\Users\Dillan\Desktop\Unity\CardGames
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 4e250000
     m_LastClickedID: 9550
-    m_ExpandedIDs: 00000000c0240000e6240000f0240000fc240000f225000006260000
+    m_ExpandedIDs: 00000000e224000008250000122500001a2500001e2500007825000014260000162600002a260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -619,21 +617,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c0240000e6240000f0240000fc24000054250000f0250000f225000006260000b22f0000
+    m_ExpandedIDs: 00000000e224000008250000122500001a2500001e2500007825000014260000162600002a260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: MainMenuController
-      m_OriginalName: MainMenuController
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17008
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
