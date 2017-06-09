@@ -3,29 +3,32 @@ using System.Collections.Generic;
 using TwentyFour.Models;
 using TwentyFour.Utility;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class TwentyFourController : MonoBehaviour
 {
     public Transform deckPrefab;
     public Transform playerPrefab;
     public Button playerOneWinButton;
     public Button playerTwoWinButton;
+    public Button drawButton;
     public Button dealButton;
     public Button showTopTwoButton;
     public Button flipButton;
     public Button resetButton;
     public Button resetYesButton;
     public Button resetNoButton;
-    public Button drawButton;
-
+    public Button mainMenuButton;
+    public Button mainMenuYesButton;
+    public Button mainMenuNoButton;
+    public GameObject winnerPanel;
 
     private Deck _deck;
     private Player _playerOne;
     private Player _playerTwo;
     private List<Card> _middleCards;
     private bool _isGameOver;
-
 
     #region Unity Methods
     private void Awake()
@@ -166,6 +169,38 @@ public class GameManager : MonoBehaviour
             EnableButtonsForNewHand();
         }
     }
+
+    /// <summary>
+    /// Displays confirmation buttons for returning to the main menu.
+    /// </summary>
+    public void ConfirmBackToMainMenu()
+    {
+        if (_isGameOver)
+        {
+            BackToMainMenu();
+            return;
+        }
+
+        mainMenuYesButton.gameObject.SetActive(true);
+        mainMenuNoButton.gameObject.SetActive(true);
+    }
+
+    /// <summary>
+    /// Hides confirmation buttons for returning to the main menu.
+    /// </summary>
+    public void DenyBackToMainMenu()
+    {
+        mainMenuYesButton.gameObject.SetActive(false);
+        mainMenuNoButton.gameObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Returns to the main menu.
+    /// </summary>
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     #endregion
 
     #region Private Methods
@@ -176,21 +211,22 @@ public class GameManager : MonoBehaviour
     {
         _isGameOver = true;
 
-        resetYesButton.gameObject.SetActive(false);
-        resetNoButton.gameObject.SetActive(false);
-
+        drawButton.gameObject.SetActive(false);
         playerOneWinButton.gameObject.SetActive(false);
         playerOneWinButton.interactable = false;
-
         playerTwoWinButton.gameObject.SetActive(false);
         playerTwoWinButton.interactable = false;
 
-        drawButton.gameObject.SetActive(false);
-
         dealButton.interactable = true;
-
         showTopTwoButton.interactable = false;
         flipButton.interactable = false;
+
+        resetYesButton.gameObject.SetActive(false);
+        resetNoButton.gameObject.SetActive(false);
+        mainMenuNoButton.gameObject.SetActive(false);
+        mainMenuYesButton.gameObject.SetActive(false);
+
+        winnerPanel.SetActive(false);
     }
 
     /// <summary>
@@ -217,6 +253,9 @@ public class GameManager : MonoBehaviour
         playerOneWinButton.gameObject.SetActive(false);
         playerTwoWinButton.gameObject.SetActive(false);
         drawButton.gameObject.SetActive(false);
+
+        winnerPanel.GetComponentInChildren<Text>().text = string.Format("{0} is the winner!", player.Name);
+        winnerPanel.SetActive(true);
     }
     #endregion
 }
