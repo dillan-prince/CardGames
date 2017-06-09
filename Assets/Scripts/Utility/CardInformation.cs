@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TwentyFour.Utility
+namespace CardGames.Utility
 {
     public static class CardInformation
     {

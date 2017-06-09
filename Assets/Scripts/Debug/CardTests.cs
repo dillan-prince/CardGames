@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TwentyFour.Models;
-using TwentyFour.Utility;
+using CardGames.Models;
+using CardGames.Utility;
 using UnityEngine;
 
 /// <summary>

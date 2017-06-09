@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using TwentyFour.Utility;
-using TwentyFour.Models;
+using CardGames.Utility;
+using CardGames.Models;
 using System.Collections.Generic;
 
 public class PlayerTests : MonoBehaviour

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using TwentyFour.Models;
+using CardGames.Models;
 using UnityEngine;
 
-namespace TwentyFour.Utility
+namespace CardGames.Utility
 {
     /// <summary>
     /// Class representing a deck of cards.

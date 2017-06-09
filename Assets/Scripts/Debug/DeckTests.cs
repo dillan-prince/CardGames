@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using TwentyFour.Utility;
-using TwentyFour.Models;
+using CardGames.Utility;
+using CardGames.Models;
 
 public class DeckTests : MonoBehaviour
 {

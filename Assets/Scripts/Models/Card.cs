@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TwentyFour.Utility;
+using CardGames.Utility;
 using UnityEngine;
 
-namespace TwentyFour.Models
+namespace CardGames.Models
 {
     /// <summary>
     /// Class representing a playing card.
